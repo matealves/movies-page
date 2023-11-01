@@ -8,7 +8,7 @@ import { ContainerLoad, Loader } from "../../components/Loader.ts";
 
 function Details() {
   const { id } = useParams();
-  const [movie, setMovie] = useState<Movie | any>({});
+  const [movie, setMovie] = useState({} as Movie);
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
@@ -21,18 +21,26 @@ function Details() {
       },
     })
       .then((response) => response.json())
-      .then(({ title, overview, poster_path, release_date, vote_average }) => {
-        const movie = {
-          id,
+      .then(
+        ({
           title,
           overview,
-          releaseDate: release_date,
-          image: `${image_path}${poster_path}`,
+          poster_path,
+          release_date,
           vote_average,
-        };
-        setMovie(movie);
-        setTimeout(() => setLoad(false), 400);
-      })
+        }: Movie) => {
+          const movie = {
+            id,
+            title,
+            overview,
+            release_date,
+            poster_path: `${image_path}${poster_path}`,
+            vote_average,
+          };
+          setMovie(movie);
+          setTimeout(() => setLoad(false), 400);
+        }
+      )
       .catch((err) => console.error(err));
   }, [id]);
 
@@ -45,14 +53,16 @@ function Details() {
       )}
       {!load && (
         <div className="movie">
-          <img src={movie.image} alt={movie.title} />
+          <img src={movie.poster_path} alt={movie.title} />
           <div className="details">
             <h1>{movie.title}</h1>
             <span>Visão geral: {movie.overview}</span>
             <span>Nota: {movie.vote_average?.toFixed(1)}</span>
             <span className="release-date">
               Data de lançamento:
-              {` ${new Date(movie.releaseDate).toLocaleString().split(",")[0]}`}
+              {` ${
+                new Date(movie.release_date).toLocaleString().split(",")[0]
+              }`}
             </span>
             <Link to="/">
               <button>Voltar</button>

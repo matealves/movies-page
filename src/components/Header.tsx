@@ -11,11 +11,7 @@ export const Header = () => {
     <div>
       <ContainerHeader>
         <Logo>
-          <img
-            src="../../public/netflix_logo.png"
-            alt="logo"
-            className="logo"
-          />
+          <img src="../../public/logo.png" alt="logo" className="logo" />
         </Logo>
         <MenuList>
           <Menu>Filmes</Menu>
@@ -23,7 +19,12 @@ export const Header = () => {
           <Menu>Gênero</Menu>
         </MenuList>
         <Search>
-          <img src="../../public/lupa.png" alt="search" className="search" />
+          <img
+            src="../../public/lupa.png"
+            alt="search"
+            className="search"
+            title="Pesquisar"
+          />
         </Search>
       </ContainerHeader>
     </div>

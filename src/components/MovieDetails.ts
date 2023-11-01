@@ -33,7 +33,7 @@ export const MovieDetails = styled.div`
   }
 
   button {
-    background-color: #6654da;
+    background-color: #bf9e02;
     border: none;
     cursor: pointer;
     border-radius: 1rem;
@@ -45,7 +45,7 @@ export const MovieDetails = styled.div`
   }
 
   button:hover {
-    background-color: #5829a2;
+    filter: brightness(1.2);
   }
 
   span {

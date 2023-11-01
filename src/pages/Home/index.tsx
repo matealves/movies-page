@@ -6,6 +6,7 @@ import { Container } from "../../components/Container";
 import { MovieList } from "../../components/MovieList";
 import { Movie } from "../../components/Movie";
 import { Header } from "../../components/Header.tsx";
+import { Footer, Linkedin } from "../../components/Footer.ts";
 function Home() {
   const [movies, setMovies] = useState([]);
 
@@ -46,6 +47,14 @@ function Home() {
             );
           })}
       </MovieList>
+      <Footer>
+        <Linkedin
+          href="https://www.linkedin.com/in/mateusalvesds/"
+          target="_blank"
+        >
+          © Developed by Mateus Alves
+        </Linkedin>
+      </Footer>
     </Container>
   );
 }

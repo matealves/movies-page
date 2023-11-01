@@ -5,6 +5,8 @@ export const Container = styled.div`
     font-size: 1.2rem;
     text-align: center;
     margin: 2rem 0;
+    color: #bf9e02;
+    font-weight: 600;
   }
 
   .erro {

@@ -1,27 +1,60 @@
-# React + TypeScript + Vite
+# CineMat - API Filmes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Projeto desenvolvido para estudos de React + TypeScript
 
-Currently, two official plugins are available:
+[• Como rodar o projeto](#start)<br>
+[• Skills utilizadas](#leng)<br>
+[• Contato](#contato)<br>
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Visão geral
 
-## Expanding the ESLint configuration
+Navegue pelos filmes, como você é acostumado a fazer em suas plataformas preferidas de **streaming**, os filmes são consumidos através de uma API e estão sendo exibidos os filmes na categoria **populares** no momento.
+<br>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<!-- ### [Testar / preview](https://matealves.github.io/react-imc-calculator/dist/) <br><br> -->
 
-- Configure the top-level `parserOptions` property like this:
+<p id="start"></p>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### - Instalação:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### `npm install`
+
+### - Rodar no server local:
+
+### `npm run dev`
+
+<br>
+
+<p id="leng"></p>
+
+# Skills utilizadas
+
+<p>
+  <!-- <img align="center" alt="Sass" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"> -->
+  <!-- <img align="center" alt="Js" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> -->
+
+  <img align="center" alt="ReactJS" height="30" width="40" title="React.Js" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+  <img align="center" alt="TypeScript" height="30" width="40" title="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+    <!-- <img align="center" alt="HTML 5" height="30" width="40" title="HTML 5"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"> -->
+   <!-- <img align="center" alt="CSS 3" height="30" title="CSS 3" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> -->
+</p>
+<br>
+
+<p id="contato"></p>
+
+# Como entro em contato?
+
+Entre em contato através dos links a seguir!
+<br>
+<br>
+<a href="https://www.linkedin.com/in/mateusalvesds/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+
+<a href = "mailto:contatomateusalves@hotmail.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a>
+
+<a href="https://api.whatsapp.com/send?phone=+5511966616365" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank"></a>
+
+</p>
+<br>
+<br>
+<br>
