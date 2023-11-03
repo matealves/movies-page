@@ -11,9 +11,13 @@ function Details() {
   const { id } = useParams();
   const [movie, setMovie] = useState({} as Movie);
   const [load, setLoad] = useState(false);
+  const [show, setShow] = useState("hide");
 
   useEffect(() => {
     setLoad(true);
+
+    setTimeout(() => setShow("show"), 20);
+
     fetch(`https://api.themoviedb.org/3/movie/${id}?language=pt-BR&page=1`, {
       method: "GET",
       headers: {
@@ -48,7 +52,7 @@ function Details() {
   return (
     <MovieDetails>
       {load && (
-        <ContainerLoad>
+        <ContainerLoad className={show}>
           <Loader />
         </ContainerLoad>
       )}

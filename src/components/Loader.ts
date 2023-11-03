@@ -10,6 +10,14 @@ export const ContainerLoad = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s;
+
+  &.hide {
+    opacity: 0;
+  }
+  &.show {
+    opacity: 1;
+  }
 `;
 
 export const Loader = styled.div`
