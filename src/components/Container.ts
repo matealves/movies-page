@@ -7,6 +7,11 @@ export const Container = styled.div`
     margin: 2rem 0;
     color: #bf9e02;
     font-weight: 600;
+
+    @media (max-width: 743px) {
+      margin: 1.4rem 0;
+      font-size: 1rem;
+    }
   }
 
   .erro {

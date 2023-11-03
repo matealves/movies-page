@@ -8,6 +8,11 @@ export const ContainerHeader = styled.header`
   padding: 0 5rem;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 743px) {
+    height: 80px;
+    padding: 0 2.5rem;
+  }
 `;
 
 export const Logo = styled.div`
@@ -28,6 +33,10 @@ export const MenuList = styled.ul`
   font-size: 1rem;
   color: #aaa;
   flex: 1;
+
+  @media (max-width: 743px) {
+    display: none;
+  }
 `;
 
 export const Menu = styled.li`

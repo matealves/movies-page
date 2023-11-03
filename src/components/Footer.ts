@@ -8,6 +8,11 @@ export const Footer = styled.footer`
   padding: 0 5rem;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 743px) {
+    height: 80px;
+    padding: 0 2.5rem;
+  }
 `;
 
 export const Linkedin = styled.a`
