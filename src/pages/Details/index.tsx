@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { token } from "../../config/token.js";
 import { image_path } from "../../config/image_path.ts";
 import { Movie } from "../../types/Movie.ts";
 import { MovieDetails } from "../../components/MovieDetails.ts";
 import { ContainerLoad, Loader } from "../../components/Loader.ts";
+import { CurrentMovie } from "../../components/CurrentMovie.tsx";
 
 function Details() {
   const { id } = useParams();
@@ -51,25 +52,7 @@ function Details() {
           <Loader />
         </ContainerLoad>
       )}
-      {!load && (
-        <div className="movie">
-          <img src={movie.poster_path} alt={movie.title} />
-          <div className="details">
-            <h1>{movie.title}</h1>
-            <span>Visão geral: {movie.overview}</span>
-            <span>Nota: {movie.vote_average?.toFixed(1)}</span>
-            <span className="release-date">
-              Data de lançamento:
-              {` ${
-                new Date(movie.release_date).toLocaleString().split(",")[0]
-              }`}
-            </span>
-            <Link to="/">
-              <button>Voltar</button>
-            </Link>
-          </div>
-        </div>
-      )}
+      {!load && <CurrentMovie movie={movie} />}
     </MovieDetails>
   );
 }

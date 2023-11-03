@@ -28,7 +28,7 @@ function Home() {
   return (
     <Container>
       <Header />
-      <h1>Filmes</h1>
+      <h1>Mais Populares</h1>
       <MovieList>
         {!movies && (
           <div className="erro">
