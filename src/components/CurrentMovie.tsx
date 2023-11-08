@@ -18,7 +18,7 @@ export const CurrentMovie = ({ movie }: Props) => {
             Data de lançamento:
             {` ${new Date(movie.release_date).toLocaleString().split(",")[0]}`}
           </span>
-          <Link to="/">
+          <Link to="javascript:history.back()">
             <button>Voltar</button>
           </Link>
         </div>
