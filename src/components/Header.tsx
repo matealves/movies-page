@@ -8,7 +8,7 @@ import {
 } from "./ContainerHeader.ts";
 
 type Props = {
-  page: number;
+  page: string;
   home: () => void;
 };
 
@@ -17,7 +17,7 @@ export const Header = ({ page, home }: Props) => {
     <div>
       <ContainerHeader>
         <Logo>
-          <Link to={`/${page}`} onClick={home}>
+          <Link to={`${page}`} onClick={home}>
             <img src="../../public/logo.png" alt="logo" className="logo" />
           </Link>
         </Logo>

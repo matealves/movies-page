@@ -58,7 +58,7 @@ function Home() {
 
   return (
     <Container>
-      <Header page={1} home={home} />
+      <Header page="/" home={home} />
       <h1 className={`${!movies ? "hide" : ""}`}>Mais Populares</h1>
       <MovieList>
         {!movies && (
