@@ -14,7 +14,7 @@ function Home() {
   const { page } = useParams();
   const pageParam: string = page || "1";
   const [movies, setMovies] = useState([]);
-  const [currentPage, setPage] = useState(+pageParam);
+  const [currentPage, setCurrentPage] = useState(+pageParam);
 
   useEffect(() => {
     scrollToTop();
@@ -44,18 +44,22 @@ function Home() {
 
   const handleBack = () => {
     scrollToTop();
-    if (+currentPage > 1) setPage(currentPage - 1);
+    if (+currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
   const handleNext = () => {
     scrollToTop();
-    if (+currentPage < 10) setPage(currentPage + 1);
+    if (+currentPage < 10) setCurrentPage(currentPage + 1);
+  };
+
+  const home = () => {
+    setCurrentPage(1);
   };
 
   return (
     <Container>
-      <Header />
-      <h1>Mais Populares</h1>
+      <Header page={1} home={home} />
+      <h1 className={`${!movies ? "hide" : ""}`}>Mais Populares</h1>
       <MovieList>
         {!movies && (
           <div className="erro">

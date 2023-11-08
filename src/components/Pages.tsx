@@ -14,7 +14,7 @@ export const Pages = ({ page, back, next }: Props) => {
           ≪ Anterior
         </button>
       </Link>
-      <span className="current-page">{page}</span>
+      <span className="current-page">{page || 1}</span>
       <Link to={`/${page + 1}`}>
         <button onClick={next} disabled={page === 10 ? true : false}>
           Próxima ≫

@@ -16,9 +16,13 @@ export const ContainerHeader = styled.header`
 `;
 
 export const Logo = styled.div`
-  height: 45%;
   display: flex;
   flex: 2;
+  height: 45%;
+
+  a {
+    display: flex;
+  }
 
   .logo {
     cursor: pointer;
