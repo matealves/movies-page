@@ -20,7 +20,13 @@ export const AreaPages = styled.div`
     font-size: 0.8rem;
   }
 
-  button:hover {
+  button:disabled {
+    background-color: #aaa;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  button:hover:not(:disabled) {
     filter: brightness(0.8);
   }
 

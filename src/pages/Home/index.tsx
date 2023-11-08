@@ -12,15 +12,14 @@ import { Pages } from "../../components/Pages.tsx";
 
 function Home() {
   const { page } = useParams();
-  const currentPage: string = page ? page : "1";
+  const pageParam: string = page || "1";
   const [movies, setMovies] = useState([]);
-  const [newPage, setNewPage] = useState(+currentPage);
-
-  console.log("newPage", newPage);
+  const [currentPage, setPage] = useState(+pageParam);
 
   useEffect(() => {
+    scrollToTop();
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=${newPage}`,
+      `https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=${currentPage}`,
       {
         method: "GET",
         headers: {
@@ -34,14 +33,23 @@ function Home() {
         setMovies(data.results);
       })
       .catch((err) => console.error(err));
-  }, [newPage]);
+  }, [currentPage]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const handleBack = () => {
-    if (+newPage > 1) return setNewPage(newPage - 1);
+    scrollToTop();
+    if (+currentPage > 1) setPage(currentPage - 1);
   };
 
   const handleNext = () => {
-    if (+newPage < 10) setNewPage(newPage + 1);
+    scrollToTop();
+    if (+currentPage < 10) setPage(currentPage + 1);
   };
 
   return (
@@ -67,7 +75,7 @@ function Home() {
           })}
       </MovieList>
       <AreaPages>
-        <Pages page={newPage} back={handleBack} next={handleNext} />
+        <Pages page={currentPage} back={handleBack} next={handleNext} />
       </AreaPages>
       <Footer>
         <Linkedin

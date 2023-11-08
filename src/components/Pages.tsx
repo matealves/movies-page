@@ -9,12 +9,16 @@ type Props = {
 export const Pages = ({ page, back, next }: Props) => {
   return (
     <>
-      <Link to={`/${page}`}>
-        <button onClick={back}>≪ Anterior</button>
+      <Link to={`/${page === 2 ? "" : page - 1}`}>
+        <button onClick={back} disabled={page === 1 ? true : false}>
+          ≪ Anterior
+        </button>
       </Link>
       <span className="current-page">{page}</span>
-      <Link to={`/${page}`}>
-        <button onClick={next}>Próxima ≫</button>
+      <Link to={`/${page + 1}`}>
+        <button onClick={next} disabled={page === 10 ? true : false}>
+          Próxima ≫
+        </button>
       </Link>
     </>
   );
