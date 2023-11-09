@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Movie } from "../types/Movie";
 
 type Props = {
@@ -6,6 +6,12 @@ type Props = {
 };
 
 export const CurrentMovie = ({ movie }: Props) => {
+  const navigate = useNavigate();
+
+  const backPage = () => {
+    navigate(-1);
+  };
+
   return (
     <>
       <div className="movie">
@@ -18,9 +24,7 @@ export const CurrentMovie = ({ movie }: Props) => {
             Data de lançamento:
             {` ${new Date(movie.release_date).toLocaleString().split(",")[0]}`}
           </span>
-          <Link to="javascript:history.back()">
-            <button>Voltar</button>
-          </Link>
+          <button onClick={backPage}>Voltar</button>
         </div>
       </div>
     </>
