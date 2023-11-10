@@ -9,11 +9,13 @@ import { Header } from "../../components/Header.tsx";
 import { Footer, Linkedin } from "../../components/Footer.ts";
 import { AreaPages } from "../../components/AreaPages.ts";
 import { Pages } from "../../components/Pages.tsx";
+import { Skeleton } from "../../components/Skeleton.tsx";
 
 function Home() {
   const { page } = useParams();
   const pageParam: string = page || "1";
   const [movies, setMovies] = useState([]);
+  const [initial, seInitial] = useState(true);
   const [currentPage, setCurrentPage] = useState(+pageParam);
 
   useEffect(() => {
@@ -30,7 +32,14 @@ function Home() {
     )
       .then((response) => response.json())
       .then((data) => {
-        setMovies(data.results);
+        if (initial) {
+          setTimeout(() => {
+            seInitial(false);
+            setMovies(data.results);
+          }, 1800);
+        } else {
+          setMovies(data.results);
+        }
       })
       .catch((err) => console.error(err));
   }, [currentPage]);
@@ -66,7 +75,8 @@ function Home() {
             Não foi possível baixar os filmes no momento.
           </div>
         )}
-        {movies &&
+        {!movies.length && initial && <Skeleton />}
+        {!!movies.length &&
           movies.map(({ id, title, poster_path }) => {
             return (
               <Movie key={id}>
