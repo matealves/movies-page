@@ -18,7 +18,7 @@ export const Header = ({ page, home }: Props) => {
       <ContainerHeader>
         <Logo>
           <Link to={`${page}`} onClick={home}>
-            <img src="../../public/logo.png" alt="logo" className="logo" />
+            <img src="images/logo.png" alt="logo" className="logo" />
           </Link>
         </Logo>
         <MenuList>
@@ -28,7 +28,7 @@ export const Header = ({ page, home }: Props) => {
         </MenuList>
         <Search>
           <img
-            src="../../public/lupa.png"
+            src="images/lupa.png"
             alt="search"
             className="search"
             title="Pesquisar"
