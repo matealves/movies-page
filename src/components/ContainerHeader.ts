@@ -59,7 +59,6 @@ export const Search = styled.div`
   height: 45%;
   display: flex;
   justify-content: right;
-  cursor: pointer;
   flex: 2;
 
   .search {
