@@ -36,7 +36,7 @@ function Home() {
           setTimeout(() => {
             seInitial(false);
             setMovies(data.results);
-          }, 1800);
+          }, 1000);
         } else {
           setMovies(data.results);
         }
