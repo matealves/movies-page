@@ -12,11 +12,9 @@
 Navegue pelos filmes, como você é acostumado a fazer em suas plataformas preferidas de **streaming**, os filmes são consumidos através de uma API e estão sendo exibidos os filmes na categoria **populares** no momento.
 <br>
 
- 
-<center>
-
-## [Testar / preview](https://cinemat.vercel.app/)
-</center>
+<h2 align="center">
+<a href="https://cinemat.vercel.app/" target="_blank">Testar / preview</a> 
+</h1>
 
  <img src ="src/images/cinemat_readme.png" alt = "mockup"/> <br><br>
 
