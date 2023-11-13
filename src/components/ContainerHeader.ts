@@ -27,6 +27,10 @@ export const Logo = styled.div`
 
   .logo {
     cursor: pointer;
+
+    @media (max-width: 743px) {
+      height: 32px;
+    }
   }
 
   @media (max-width: 743px) {
