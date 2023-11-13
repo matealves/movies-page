@@ -68,11 +68,15 @@ export const Menu = styled.li`
 export const Search = styled.div`
   height: 45%;
   display: flex;
-  justify-content: right;
+  justify-content: end;
   flex: 2;
 
   .search {
     cursor: pointer;
+
+    @media (max-width: 743px) {
+      height: 32px;
+    }
   }
 
   @media (max-width: 743px) {
