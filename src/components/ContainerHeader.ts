@@ -12,6 +12,7 @@ export const ContainerHeader = styled.header`
   @media (max-width: 743px) {
     height: 80px;
     padding: 0 2.5rem;
+    max-width: 100vw;
   }
 `;
 
@@ -26,6 +27,10 @@ export const Logo = styled.div`
 
   .logo {
     cursor: pointer;
+  }
+
+  @media (max-width: 743px) {
+    flex: 1;
   }
 `;
 
@@ -63,5 +68,9 @@ export const Search = styled.div`
 
   .search {
     cursor: pointer;
+  }
+
+  @media (max-width: 743px) {
+    flex: 1;
   }
 `;
