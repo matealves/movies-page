@@ -31,6 +31,7 @@ export const Logo = styled.div`
 
   @media (max-width: 743px) {
     flex: 1;
+    height: 45%;
   }
 `;
 
