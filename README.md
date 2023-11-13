@@ -9,7 +9,7 @@
 
 # Visão geral
 
-Navegue pelos filmes, como você é acostumado a fazer em suas plataformas preferidas de **streaming**, os filmes são consumidos através de uma API e estão sendo exibidos os filmes na categoria **populares** no momento.
+Navegue pelos filmes como você é acostumado a fazer em suas plataformas preferidas de **streaming**, os filmes são consumidos através de uma API e estão sendo exibidos na categoria **populares**, além de poder navegar entre páginas para ver os filmes que estão em posições inferiores no ranking de **populares**.
 <br>
 
 <h2 align="center">
