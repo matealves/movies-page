@@ -1,4 +1,4 @@
-# CineMat - API Filmes
+# Página de Filmes
 
 ### Projeto desenvolvido para estudos de React + TypeScript
 
